@@ -14,4 +14,5 @@ RUN set -x \
  && apt clean \
  && rm -rf /var/lib/apt/lists/* \
  && apt -qy autoremove
+RUN python3 -c "import matplotlib.font_manager as fm; fm._rebuild()"
 USER jovyan
